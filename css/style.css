@@ -433,27 +433,26 @@ section.portfolio .container .work {
 }
 section.portfolio .container .work .parent {
   grid-column: span 5;
-  grid-row: span 3;
-  position: relative;
+  grid-row: span 5;
+}
+section.portfolio .container .work .parent .img {
+  width: 100%;
+  height: 70%;
+}
+section.portfolio .container .work .parent .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 section.portfolio .container .work .parent .infos {
-  position: absolute;
-  bottom: 0%;
-  left: 0%;
-  width: 100%;
-  height: 50%;
+  height: 30%;
   background-color: var(--second-color);
-  padding-top: 1em;
-  text-align: center;
-  opacity: 0;
-  transition: 0.8s all ease;
-  -webkit-transition: 0.8s all ease;
-  -moz-transition: 0.8s all ease;
-  -ms-transition: 0.8s all ease;
-  -o-transition: 0.8s all ease;
-}
-section.portfolio .container .work .parent:hover .infos {
-  opacity: 1;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 section.portfolio .container .work .parent .infos h6 {
   text-transform: capitalize;
@@ -489,49 +488,30 @@ section.portfolio .container .work .parent .infos a:last-of-type {
   padding: 10px 15px;
   border-radius: 20px;
 }
-section.portfolio .container .work .parent .img {
-  width: 100%;
-  height: 100%;
-}
-section.portfolio .container .work .parent .img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
-}
 @media (max-width: 767px) {
   section.portfolio {
     margin-bottom: 0px;
   }
   section.portfolio .container .work {
-    gap: 10px;
+    gap: 15px;
   }
   section.portfolio .container .work .parent {
     grid-column: span 11;
-    grid-row: span 2;
-  }
-  section.portfolio .container .work .parent .img {
-    height: 80%;
-  }
-  section.portfolio .container .work .parent .infos {
-    height: 20%;
-    opacity: 1;
-    padding-top: 0em;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    grid-row: span 3;
   }
   section.portfolio .container .work .parent .infos h6 {
-    font-size: 10px;
+    font-size: 13px;
     margin-bottom: 0px;
     border: none;
     font-weight: 500;
   }
   section.portfolio .container .work .parent .infos p {
-    display: none;
+    font-weight: 300;
+    font-size: 11px;
   }
   section.portfolio .container .work .parent .infos a:first-of-type {
-    display: none;
+    font-size: 10px;
+    margin-bottom: 5px;
   }
   section.portfolio .container .work .parent .infos a:last-of-type {
     font-size: 8px;
@@ -542,45 +522,11 @@ section.portfolio .container .work .parent .img img {
   section.portfolio {
     margin-bottom: 0px;
   }
-  section.portfolio .container .work {
-    gap: 20px;
-  }
   section.portfolio .container .work .parent {
     grid-column: span 11;
-    grid-row: span 4;
-  }
-  section.portfolio .container .work .parent .img {
-    height: 80%;
-  }
-  section.portfolio .container .work .parent .infos {
-    height: 20%;
-    opacity: 1;
-    padding-top: 0em;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-  section.portfolio .container .work .parent .infos h6 {
-    font-size: 13px;
-    margin-bottom: 0px;
-    border: none;
-    font-weight: 500;
-  }
-  section.portfolio .container .work .parent .infos p {
-    display: block;
-    margin-bottom: 0px;
-    font-size: 10px;
-  }
-  section.portfolio .container .work .parent .infos a:first-of-type {
-    display: block;
-    margin-bottom: 0px;
-  }
-  section.portfolio .container .work .parent .infos a:last-of-type {
-    font-size: 9px;
-    padding: 8px;
+    grid-row: span 5;
   }
 }
-
 /* ----------------------------------end portfolio----------------------------------  */
 /*---------------------------------------- start contact---------------------------------------- */
 section.contact {
