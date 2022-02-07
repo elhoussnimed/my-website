@@ -472,7 +472,7 @@ section.portfolio .container .work .parent .infos p a.license {
   text-transform: uppercase;
   margin-bottom: 5px;
 }
-section.portfolio .container .work .parent .infos a:last-of-type {
+section.portfolio .container .work .parent .infos a.live-preview {
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 800;
@@ -480,6 +480,15 @@ section.portfolio .container .work .parent .infos a:last-of-type {
   border: 1px solid var(--primary-color);
   padding: 10px 15px;
   border-radius: 20px;
+  margin-bottom: 10px;
+}
+section.portfolio .container .work .parent .infos a.github-repo {
+  border: none;
+  font-size: 10px;
+  font-weight: 500;
+  display: block;
+  color: var(--primary-color);
+  text-transform: uppercase;
 }
 @media (max-width: 767px) {
   section.portfolio {
@@ -506,9 +515,12 @@ section.portfolio .container .work .parent .infos a:last-of-type {
     font-size: 10px;
     margin-bottom: 5px;
   }
-  section.portfolio .container .work .parent .infos a:last-of-type {
+  section.portfolio .container .work .parent .infos a.live-preview {
     font-size: 8px;
     padding: 5px;
+  }
+  section.portfolio .container .work .parent .infos a.github-repo {
+    font-size: 7px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
