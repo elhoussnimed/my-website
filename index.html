@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- add the main css file  -->
     <link rel="stylesheet" href="./css/style.css">
+    <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -84,7 +85,8 @@
                 <h2 class="sec-title">portfolio</h2>
             </div>
             <div class="work">
-                <div class="mint-portfolio parent">
+                <span class="switch-btn prev disable"><i class="fa-solid fa-angles-left"></i></span>
+                <div class="mint-portfolio parent active">
                     <div class="img" title="click to preview">
                         <a href="https://elhoussnimed.github.io/mint-template/" target="_blank"><img
                                 src="./imgs/mint.png" alt=""></a>
@@ -239,6 +241,7 @@
                                 target="_blank">Github repository</a></p>
                     </div>
                 </div>
+                <span class="switch-btn next"><i class="fa-solid fa-angles-right"></i></span>
             </div>
         </div>
     </section>
@@ -275,7 +278,7 @@
                 <p>design and code with <i class="fas fa-heart"></i> by <span>mohammed el houssni</span></p>
             </div>
             <div class="right-footer">
-                <p>all copyright reserved <span>&copy;</span> 2021</p>
+                <p>all copyright reserved <span>&copy;</span> <span class="website-year">2021</span></p>
             </div>
         </div>
     </footer>

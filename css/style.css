@@ -425,7 +425,7 @@ section.portfolio {
 section.portfolio .container .title {
   text-align: center;
 }
-section.portfolio .container .work {
+/* section.portfolio .container .work {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-auto-rows: 100px;
@@ -434,7 +434,55 @@ section.portfolio .container .work {
 section.portfolio .container .work .parent {
   grid-column: span 5;
   grid-row: span 5;
+} */
+
+/* new styling for portfolio section =============== */
+
+section.portfolio .container .work {
+    display: flex;
+    overflow-x: hidden;
+    position: relative;
+    height: 650px;
 }
+
+section.portfolio .container .work .parent {
+  height: 100%;
+  width: 80%;
+  margin-left: 10%;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  transition: .3s all linear;
+}
+
+section.portfolio .container .work .parent.active {
+    left: 0;
+}
+
+section.portfolio .container .work .switch-btn{
+  color: white;
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+section.portfolio .container .work .switch-btn.disable {
+  pointer-events: none;
+  color: rgb(105,105,105);
+}
+
+section.portfolio .container .work .prev {
+  left: 0;
+}
+
+section.portfolio .container .work .next {
+  right: 0;
+}
+
+/* end new styling for portfolio section ============ */
+
 section.portfolio .container .work .parent .img {
   width: 100%;
   height: 70%;
@@ -690,13 +738,18 @@ footer .container .left-footer span {
   word-spacing: 0;
   letter-spacing: 2px;
 }
-footer .container .right-footer p {
+footer .container .right-footer p,
+footer .container .right-footer .website-year {
   color: var(--primary-color);
 }
+
 footer .container .right-footer span {
   color: var(--second-color);
   font-size: 17px;
 }
+
+
+
 @media (max-width: 767px) {
   footer .container {
     flex-direction: column;
