@@ -152,6 +152,9 @@ header .container nav .logo h2:hover {
   color: var(--second-color);
   border-bottom: 1px solid var(--second-color);
 }
+header .container nav .burger {
+  display: none;
+}
 header .container nav ul {
   display: flex;
 }
@@ -181,21 +184,52 @@ header .container nav ul li a:hover {
   header .container nav {
     flex-direction: column;
     align-items: center;
+    position: relative;
   }
   header .container nav .logo {
     margin-bottom: 20px;
     width: 100%;
-    text-align: center;
   }
   header .container nav .logo h2 {
     font-size: 20px;
   }
+  header .container nav .burger {
+    display: block;
+    font-size: 23px;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
   header .container nav ul {
+    z-index: 2;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 500px;
+    border-radius: 6px;
+    background-color: var(--second-color);
+    transition: .4s all linear;
+    position: absolute;
+    top: 50px;
+    opacity: 0;
+    pointer-events: none;
   }
   header .container nav ul li {
-    margin: 0 0 20px;
+    margin: 0;
+  }
+  header .container nav ul li a {
+    color: var(--primary-color);
+    font-size: 25px;
+  }
+  header .container nav ul li a:hover {
+    color: var(--primary-color);
+  }
+  header .container nav ul.show-menu {
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 /*----------------------------------- end header-------------------------------  */
@@ -544,6 +578,7 @@ section.portfolio .container .work .parent .infos a.github-repo {
   }
   section.portfolio .container .work {
     gap: 15px;
+    height: 350px;
   }
   section.portfolio .container .work .parent {
     grid-column: span 11;
@@ -761,6 +796,9 @@ footer .container .right-footer span {
   }
   footer .container .left-footer span {
     font-size: 10px;
+  }
+  .container .right-footer .website-year {
+    font-size: 14px;
   }
 }
 /* --------------------------------------end footer--------------------------------------  */
